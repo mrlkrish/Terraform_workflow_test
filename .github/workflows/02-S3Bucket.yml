@@ -5,7 +5,7 @@ on:
 jobs:
   Plan_Dev:
     if: github.ref == 'refs/heads/feature'
-    uses: .github/workflows/aws_tf_plan.yml@feature
+    uses: ./.github/workflows/aws_tf_plan.yml@feature
     with:
       path: S3Bucket
       tf_vars_file: dev.tfvars
@@ -15,7 +15,7 @@ jobs:
 
   Deploy_Dev:
     needs: Plan_Dev
-    uses: .github/workflows/aws_tf_appy.yml@feature
+    uses: ./.github/workflows/aws_tf_appy.yml@feature
     with:
       path: S3Bucket
       tf_vars_file: dev.tfvars
@@ -25,7 +25,7 @@ jobs:
 
   Plan_Uat:
     if: github.ref == 'refs/heads/main'
-    uses: .github/workflows/aws_tf_plan.yml@main
+    uses: ./.github/workflows/aws_tf_plan.yml@main
     with:
       path: S3Bucket
       tf_vars_file: uat.tfvars
@@ -35,7 +35,7 @@ jobs:
 
   Deploy_Uat:
     needs: Plan_Uat
-    uses: .github/workflows/aws_tf_appy.yml@main
+    uses: ./.github/workflows/aws_tf_appy.yml@main
     with:
       path: S3Bucket
       tf_vars_file: uat.tfvars
