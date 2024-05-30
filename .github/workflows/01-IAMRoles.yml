@@ -5,7 +5,7 @@ on:
 jobs:
   Plan_Dev:
     if: github.ref == 'refs/heads/feature'
-    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_plan.yaml@feature
+    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_plan.yml@feature
     with:
       path: IAMRoles
       tf_vars_file: dev.tfvars
