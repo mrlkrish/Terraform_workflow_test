@@ -15,7 +15,7 @@ jobs:
 
   Deploy_Dev:
     needs: Plan_Dev
-    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_appy.yaml@feature
+    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_appy.yml@feature
     with:
       path: IAMRoles
       tf_vars_file: dev.tfvars
