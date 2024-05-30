@@ -8,15 +8,15 @@ terraform {
 
   backend "remote" {
   hostname = "app.terraform.io"  
-  organization = "CloudQuickLabs"
+  organization = "Murali_Org"
 
     workspaces {
-      name = "AWSBackup"
+      name = "Terraform-CICD-test"
     }
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-1"
 }
 
