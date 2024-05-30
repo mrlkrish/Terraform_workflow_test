@@ -11,7 +11,7 @@ terraform {
   organization = "Murali_Org"
 
     workspaces {
-      name = "Terraform-CICD-test"
+      name = "Terraform-CICD-S3"
     }
   }
 }
