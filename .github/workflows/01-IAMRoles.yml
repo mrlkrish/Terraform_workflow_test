@@ -25,7 +25,7 @@ jobs:
 
   Plan_Uat:
     if: github.ref == 'refs/heads/main'
-    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_plan.yml
+    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_plan.yml@main
     with:
       path: IAMRoles
       tf_vars_file: uat.tfvars
@@ -35,7 +35,7 @@ jobs:
 
   Deploy_Uat:
     needs: Plan_Uat
-    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_appy.yml
+    uses: mrlkrish/Terraform_workflow_test/.github/workflows/aws_tf_appy.yml@main
     with:
       path: IAMRoles
       tf_vars_file: uat.tfvars
